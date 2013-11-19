@@ -1,0 +1,24 @@
+{
+  "name": "webaudio_band",
+  "version": "0.0.0",
+  "authors": [
+    "Eduardo Shiota Yasuda <contato@eshiota.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "module": "*",
+    "qwerty-hancock": "~0.2.0",
+    "eventEmitter": "~4.2.6",
+    "handlebars": "~1.1.2",
+    "fastclick": "~0.6.10"
+  }
+}

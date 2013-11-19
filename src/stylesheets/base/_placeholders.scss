@@ -1,0 +1,38 @@
+/*******************************************************************************
+*
+*  Base - Placeholders
+*
+*  All general purpose placeholders are defined here.
+*
+*******************************************************************************/
+
+/*********************************************************************
+*  =Clearfix
+*********************************************************************/
+
+%clearfix {
+  &:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  zoom: 1;
+}
+
+
+/*********************************************************************
+*  =Image replacement
+*
+*  `display` property should be declare on the element, not here
+*  on the mixin. Element must have fixed width and height.
+*********************************************************************/
+
+%img_replacement {
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}

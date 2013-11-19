@@ -1,0 +1,475 @@
+@charset "UTF-8";
+/*******************************************************************************
+*
+*  Base - Functions
+*
+*  Custom functions used by the application.
+*
+*******************************************************************************/
+/*******************************************************************************
+*
+*  Base - Variables
+*
+*  All constants that will be used though the styles must be
+*  defined here.
+*
+*******************************************************************************/
+/*********************************************************************
+*  =Colors
+*********************************************************************/
+/*********************************************************************
+*  =Grid and typography
+*********************************************************************/
+/*******************************************************************************
+*
+*  Base - Mixins
+*
+*  All general purpose mixins are defined here.
+*
+*******************************************************************************/
+/*******************************************************************************
+*
+*  Base - Placeholders
+*
+*  All general purpose placeholders are defined here.
+*
+*******************************************************************************/
+/*********************************************************************
+*  =Clearfix
+*********************************************************************/
+.track-content, .host-controls-content, .instrument-selector {
+  zoom: 1; }
+  .track-content:after, .host-controls-content:after, .instrument-selector:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden; }
+
+/*********************************************************************
+*  =Image replacement
+*
+*  `display` property should be declare on the element, not here
+*  on the mixin. Element must have fixed width and height.
+*********************************************************************/
+.sequencer button {
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap; }
+
+/*******************************************************************************
+*
+*  Core - Reset
+*
+*  html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+*  v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
+*  html5doctor.com/html-5-reset-stylesheet/
+*
+*******************************************************************************/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li, a,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+audio:not([controls]) {
+  display: none; }
+
+[hidden] {
+  display: none; }
+
+/*******************************************************************************
+*
+*  Core - Typography
+*
+*  Contains all typographical elements styles.
+*
+*******************************************************************************/
+/* 16px / 16px - 100% */
+body {
+  font: normal 300 100%/1.5 sans-serif; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none; }
+
+abbr {
+  text-transform: lowercase; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif; }
+
+dfn {
+  font-style: italic; }
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+small {
+  font-size: 85%; }
+
+strong, th {
+  font-weight: bold; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+ul, ol, dd {
+  margin-bottom: 1.5em;
+  margin-left: 1.5em; }
+
+ol {
+  list-style: inside decimal; }
+
+ul {
+  list-style: inside disc; }
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-bottom: 0; }
+
+ul li,
+ol li {
+  margin-bottom: 0.5em; }
+
+ul li li,
+ol li li {
+  margin-bottom: 0; }
+
+p {
+  margin-bottom: 1.5em; }
+
+pre {
+  padding: 1em;
+  margin: 0 0 1.5em;
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  word-wrap: break-word;
+  /* IE */
+  background: #fefefa;
+  border: 1px solid #ececec; }
+
+blockquote {
+  padding-left: 1.5em;
+  border-left: 3px solid #555555;
+  margin-left: 4.5em;
+  font-style: italic;
+  margin-bottom: 1.5em; }
+
+/*********************************************************************
+*  =Headers
+*********************************************************************/
+h1, h2, h3, h4 {
+  font-family: sans-serif;
+  font-weight: 300; }
+
+h1 {
+  font-size: 3.5em;
+  line-height: 1em;
+  margin-bottom: 0.85714em;
+  text-align: center;
+  text-transform: lowercase; }
+
+h2 {
+  font-size: 2.75em;
+  line-height: 1em;
+  margin-bottom: 0.72727em;
+  text-align: center;
+  text-transform: uppercase; }
+
+h3 {
+  font-size: 2em;
+  line-height: 1em;
+  margin-bottom: 1em; }
+
+h4 {
+  font-size: 1.5em;
+  line-height: 1em;
+  margin-bottom: 1em; }
+
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 1em; }
+
+/*******************************************************************************
+*
+*  Core - Basic
+*
+*  Contains all main base styles and resets.
+*
+*******************************************************************************/
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body,
+select {
+  color: #555555; }
+
+/*********************************************************************
+*  =Links
+*********************************************************************/
+a {
+  text-decoration: underline; }
+
+a:focus {
+  outline: thin dotted; }
+
+/*********************************************************************
+*  =Selection
+*********************************************************************/
+::-moz-selection {
+  background: #4cabdb;
+  color: white;
+  text-shadow: none; }
+
+::selection {
+  background: #4cabdb;
+  color: white;
+  text-shadow: none; }
+
+/*********************************************************************
+*  =Media
+*********************************************************************/
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle; }
+
+/* Correct overflow not hidden in IE9 */
+svg:not(:root) {
+  overflow: hidden; }
+
+/*********************************************************************
+*  =Navigation
+*********************************************************************/
+nav ul,
+nav ol {
+  list-style: none;
+  margin: 0; }
+
+/*********************************************************************
+*  =Tables
+*********************************************************************/
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*******************************************************************************
+*
+*  Layout - Main
+*
+*  All base styles for the layout, including grid, are defined here.
+*
+*******************************************************************************/
+body {
+  background: #444;
+  color: #fff; }
+
+#container {
+  padding: 1.5em 0; }
+
+/*********************************************************************
+*  =Interface buttons
+*********************************************************************/
+button {
+  background: #ef6565;
+  border: 1px solid #f07373;
+  border-top: none;
+  color: #fff;
+  padding: 1em;
+  cursor: pointer;
+  font-size: 100%; }
+  button[disabled] {
+    background: #cccccc;
+    border: 1px solid #d4d4d4;
+    border-top: none; }
+
+/*********************************************************************
+*  =Controls
+*********************************************************************/
+.host-controls {
+  border-top: 3px solid #666; }
+
+.host-control {
+  float: left; }
+
+.sequencer-control {
+  width: 66%;
+  float: left; }
+  .sequencer-control .host-control {
+    width: 50%; }
+
+.new-instrument-control {
+  width: 33%; }
+
+.host-controls-title {
+  border-bottom: none;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 0.5em; }
+
+.host-controls button {
+  background: #0078f8;
+  border: 1px solid #0880ff;
+  border-top: none;
+  font-size: 0.875em;
+  padding-top: .5em;
+  padding-bottom: .5em; }
+
+/*********************************************************************
+*  =Tracks
+*********************************************************************/
+.track, .host-controls, .instrument-selector-track {
+  background: #3c3c3c;
+  padding: 1.71429em 0;
+  border-bottom: 3px solid #666; }
+
+.track-content, .host-controls-content, .instrument-selector {
+  width: 1110px;
+  margin: 0 auto;
+  position: relative; }
+
+.track .close, .host-controls .close, .instrument-selector-track .close {
+  background: #cccccc;
+  border: 1px solid #d4d4d4;
+  border-top: none;
+  text-indent: 0;
+  color: #333;
+  font-size: 0.85714em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.16667em;
+  border-radius: 50%;
+  padding: 0;
+  display: block;
+  text-transform: lowercase;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  top: 0.33333em; }
+
+/*********************************************************************
+*  =Sequencer
+*********************************************************************/
+.sequencer {
+  font-size: 0.875em; }
+
+.sequencer button {
+  width: 1.42857em;
+  height: 1.42857em;
+  padding: 0;
+  display: block; }
+  .sequencer button[data-switch="1"] {
+    background: #36be00;
+    border: 1px solid #3acd00;
+    border-top: none; }
+
+.sequencer .current {
+  background: #666; }
+
+.sequencer td,
+.sequencer th {
+  font-weight: 300;
+  padding: 0.42857em;
+  text-align: right;
+  border-bottom: 1px solid #606060; }
+
+.sequencer th {
+  text-align: center; }
+
+.sequencer .first-beat {
+  border-left: 1px solid #606060; }
+
+.sequencer .track-name {
+  width: 6.42857em; }
+
+/*********************************************************************
+*  =Remote instruments
+*********************************************************************/
+.empty-selector {
+  white-space: nowrap;
+  width: 17.5em;
+  height: 3em;
+  line-height: 3em;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center; }
+
+.instrument-selector-track {
+  border-top: 3px solid #666;
+  overflow: hidden; }
+
+.remote-instrument-selector {
+  float: left;
+  width: 20%;
+  margin: 0 2.5%;
+  text-align: center;
+  background: #333;
+  border-radius: 5px;
+  padding: 1em; }
+
+.remote-instrument-selector-title {
+  font-size: 1.5em;
+  line-height: 1; }
+
+/*********************************************************************
+*  =Drums
+*********************************************************************/
+.drums {
+  width: 480px; }

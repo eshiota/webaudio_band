@@ -1,0 +1,37 @@
+{
+  "name": "qwerty-hancock",
+  "main": "qwerty-hancock.js",
+  "version": "0.2.0",
+  "homepage": "http://stuartmemo.com/qwerty-hancock/",
+  "authors": [
+    "Stuart Memo"
+  ],
+  "description": "A keyboard for any musical eventuality.",
+  "keywords": [
+    "interactive",
+    "music",
+    "musical",
+    "keyboard",
+    "piano"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "raphael": "2.1.x"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.0",
+    "commit": "9872925c56e99f0a28eb8ebebeab5d35e176f441"
+  },
+  "_source": "git://github.com/stuartmemo/qwerty-hancock.git",
+  "_target": "~0.2.0",
+  "_originalSource": "qwerty-hancock"
+}

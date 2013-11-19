@@ -1,0 +1,33 @@
+<div class="host-controls">
+  <div class="host-controls-content">
+    <div class="sequencer-control" data-sequencer-control>
+      <div class="host-control">
+        <h3 class="host-controls-title">Sequencer control</h3>
+
+        <button data-sequencer-play>Play</button>
+        <button data-sequencer-stop>Stop</button>
+      </div>
+
+      <div class="tempo-control host-control">
+        <h3 class="host-controls-title">Current BPM: <span data-current-tempo>125</span></h3>
+
+        <input type="number" data-tempo value="125" />
+        <button data-change-tempo>Change</button>
+      </div>
+    </div>
+
+    <div class="new-instrument-control host-control" data-new-instrument-control>
+      <h3 class="host-controls-title">Add new instrument</h3>
+
+      <select data-select-new-instrument>
+        <option value="drum_sequencer">Drum Sequencer</option>
+        <option value="synth_sequencer">Synth Sequencer</option>
+        <option value="bass_sequencer">Bass Sequencer</option>
+        <option value="remote_drums">Drums (remote)</option>
+        <option value="remote_keyboard">Keyboard (remote)</option>
+      </select>
+
+      <button data-add-new-instrument>Add</button>
+    </div>
+  </div>
+</div>

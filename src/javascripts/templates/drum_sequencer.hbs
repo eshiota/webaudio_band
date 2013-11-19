@@ -1,0 +1,48 @@
+<div class="drum-sequencer sequencer track">
+  <div class="track-content">
+    <h3 class="track-title">Drum sequencer</h3>
+
+    <button class="close" data-close-instrument>X</button>
+
+    <table>
+      {{> sequencer_header}}
+
+      <tbody>
+        <tr data-instrument="kick">
+          <td>Kick</td>
+          {{> sequencer_switches_row}}
+        </tr>
+
+        <tr data-instrument="snare">
+          <td>Snare</td>
+          {{> sequencer_switches_row}}
+        </tr>
+
+        <tr data-instrument="tom_hi">
+          <td>Hi tom</td>
+          {{> sequencer_switches_row}}
+        </tr>
+
+        <tr data-instrument="tom_low">
+          <td>Low tom</td>
+          {{> sequencer_switches_row}}
+        </tr>
+
+        <tr data-instrument="hihat_closed">
+          <td>Closed hihat</td>
+          {{> sequencer_switches_row}}
+        </tr>
+
+        <tr data-instrument="hihat_open">
+          <td>Open hihat</td>
+          {{> sequencer_switches_row}}
+        </tr>
+
+        <tr data-instrument="trash">
+          <td>Trash</td>
+          {{> sequencer_switches_row}}
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

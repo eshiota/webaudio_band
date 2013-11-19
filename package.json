@@ -1,0 +1,16 @@
+{
+  "name": "webaudio_band",
+  "version": "0.0.1",
+  "dependencies": {
+    "socket.io": ">= 0",
+    "express": ">= 0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-handlebars": "~0.5.12",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-sass": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "ejs": "~0.8.4"
+  }
+}

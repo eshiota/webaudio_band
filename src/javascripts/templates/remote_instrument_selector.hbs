@@ -1,0 +1,9 @@
+<div class="remote-{{type}}-selector remote-instrument-selector">
+  <h3 class="remote-instrument-selector-title">{{name}}</h3>
+
+  {{#if connected}}
+    <button data-instrument-type="{{type}}" data-instrument-id="{{id}}" disabled>Unavailable</button>
+  {{else}}
+    <button data-instrument-type="{{type}}" data-instrument-id="{{id}}">Connect</button>
+  {{/if}}
+</div>
