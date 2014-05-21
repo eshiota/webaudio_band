@@ -4,15 +4,19 @@ Module("WAB.StageMixer", function (StageMixer) {
 
   $.extend(StageMixer.fn, EventEmitter.prototype);
 
-  StageMixer.fn.initialize = function () {
-    this.audioContext = new webkitAudioContext();
-    this.exit = this.audioContext.createGainNode();
-    this.looper = Module.run("WAB.Looper");
+  StageMixer.fn.initialize = function (interface) {
+    if (interface === "admin") {
+      this.audioContext = new webkitAudioContext();
+      this.exit = this.audioContext.createGainNode();
+      this.looper = Module.run("WAB.Looper");
 
-    this.exit.gain.value = 1;
-    this.exit.connect(this.audioContext.destination);
+      this.exit.gain.value = 1;
+      this.exit.connect(this.audioContext.destination);
 
-    this.loadBuffers();
+      this.loadBuffers();
+    } else {
+      WAB.Mediator.trigger("load-buffers-done");
+    }
 
     WAB.Mediator.on("sequencer-play", this.looper.start.bind(this.looper));
     WAB.Mediator.on("sequencer-pause", this.looper.pause.bind(this.looper));

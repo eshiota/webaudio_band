@@ -13,7 +13,7 @@ Module("WAB.Stage", function (Stage) {
     WAB.Mediator.on("add-new-instrument", this.renderNewInstrument.bind(this));
     WAB.Mediator.on("instrument-selected", this.renderSelectedInstrument.bind(this));
 
-    this.mixer = Module.run("WAB.StageMixer");
+    this.mixer = Module.run("WAB.StageMixer", [this.stage.data("admin") ? "admin" : "instrument"]);
 
     FastClick.attach(document.body);
   };
