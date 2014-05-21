@@ -16,11 +16,12 @@ Running the project
 1. Install NodeJS
 2. Install NodeJS package dependencies
 3. Install Bower dependencies
-4. Run `node server.js`
-5. Access `localhost:3000/admin?key=g4rbVcBTVfMFMf4GeZFTjxheBqgAQbc5nJGqef5UtvBZFth8` to
+4. Run the `grunt` task to generate the CSS and JavaScript
+5. Run `node server.js`
+6. Access `localhost:3000/admin?key=g4rbVcBTVfMFMf4GeZFTjxheBqgAQbc5nJGqef5UtvBZFth8` to
    access the host interface (that giant key was a crude way to avoid people
    at the conference possibly messing with the server =P)
-6. Add some remote instruments, and access `[server ip]:3000/` on other devices.
+7. Add some remote instruments, and access `[server ip]:3000/` on other devices.
 
 Current problems
 ----------------
