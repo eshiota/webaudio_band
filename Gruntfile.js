@@ -111,5 +111,5 @@ module.exports = function(grunt) {
 
   grunt.initConfig(config);
   tasks.forEach(grunt.loadNpmTasks);
-  grunt.registerTask("default", ["sass", "jshint", "handlebars", "concat", "copy", "watch"]);
+  grunt.registerTask("default", ["sass", "jshint", "handlebars", "concat", "watch"]);
 };
