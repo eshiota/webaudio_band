@@ -2,6 +2,10 @@
 
 Module("WAB.StageMixer", function (StageMixer) {
 
+  function capitalize (word) {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  }
+
   $.extend(StageMixer.fn, EventEmitter.prototype);
 
   StageMixer.fn.initialize = function (interface) {
@@ -43,18 +47,9 @@ Module("WAB.StageMixer", function (StageMixer) {
       element : element
     };
 
-    // TODO: Improve this
-    if (instrument === "drum_sequencer") {
-      Module.run("WAB.instruments.DrumSequencer", [args]);
-    } else if (instrument === "synth_sequencer") {
-      Module.run("WAB.instruments.SynthSequencer", [args]);
-    } else if (instrument === "bass_sequencer") {
-      Module.run("WAB.instruments.BassSequencer", [args]);
-    } else if (instrument === "remote_drums") {
-      Module.run("WAB.instruments.RemoteDrums", [args]);
-    } else if (instrument === "remote_keyboard") {
-      Module.run("WAB.instruments.RemoteKeyboard", [args]);
-    }
+    var moduleName = instrument.split("_").map(capitalize).join("");
+
+    Module.run("WAB.instruments." + moduleName, [args]);
   };
 
 });
