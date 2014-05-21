@@ -22,10 +22,10 @@ Module("WAB.instruments.RemoteKeyboard", function (RemoteKeyboard) {
       (accidentsMap[notes[i]] ? accidentsMap[notes[i]] : notes[i]) + "5.mp3";
   }
 
-  RemoteKeyboard.fn.initialize = function (audioContext, exitNode, element) {
-    this.plugin(audioContext, exitNode);
+  RemoteKeyboard.fn.initialize = function (args) {
+    this.plugin(args.audioContext, args.exitNode);
 
-    this.element = element;
+    this.element = args.element;
 
     this.id = this.getRandomId();
     this.playingSounds = {};

@@ -36,17 +36,24 @@ Module("WAB.StageMixer", function (StageMixer) {
   };
 
   StageMixer.fn.plugNewInstrument = function (instrument, element) {
+    var args = {
+      audioContext : this.audioContext,
+      exitNode : this.exit,
+      looper : this.looper,
+      element : element
+    };
+
     // TODO: Improve this
     if (instrument === "drum_sequencer") {
-      Module.run("WAB.instruments.DrumSequencer", [this.audioContext, this.exit, this.looper, element]);
+      Module.run("WAB.instruments.DrumSequencer", [args]);
     } else if (instrument === "synth_sequencer") {
-      Module.run("WAB.instruments.SynthSequencer", [this.audioContext, this.exit, this.looper, element]);
+      Module.run("WAB.instruments.SynthSequencer", [args]);
     } else if (instrument === "bass_sequencer") {
-      Module.run("WAB.instruments.BassSequencer", [this.audioContext, this.exit, this.looper, element]);
+      Module.run("WAB.instruments.BassSequencer", [args]);
     } else if (instrument === "remote_drums") {
-      Module.run("WAB.instruments.RemoteDrums", [this.audioContext, this.exit, element]);
+      Module.run("WAB.instruments.RemoteDrums", [args]);
     } else if (instrument === "remote_keyboard") {
-      Module.run("WAB.instruments.RemoteKeyboard", [this.audioContext, this.exit, element]);
+      Module.run("WAB.instruments.RemoteKeyboard", [args]);
     }
   };
 

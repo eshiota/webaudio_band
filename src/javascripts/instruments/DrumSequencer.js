@@ -14,11 +14,7 @@ Module("WAB.instruments.DrumSequencer", function (DrumSequencer) {
     "trash" : "/sounds/drums/trash.wav"
   };
 
-  // @audioContext The application's audio context
-  // @node         Audio exit node
-  // @looper       Application looper that syncs all beats
-  // @element      DOM node with graphical representation of sequencer
-  DrumSequencer.fn.initialize = function (audioContext, exitNode, looper, element) {
+  DrumSequencer.fn.initialize = function () {
     WAB.instruments.Sequencer.fn.initialize.apply(this, arguments);
   };
 

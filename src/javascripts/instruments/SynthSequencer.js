@@ -2,11 +2,7 @@ Module("WAB.instruments.SynthSequencer", function (SynthSequencer) {
 
   $.extend(SynthSequencer.fn, WAB.instruments.Sequencer.fn);
 
-  // @audioContext The application's audio context
-  // @node         Audio exit node
-  // @looper       Application looper that syncs all beats
-  // @element      DOM node with graphical representation of sequencer
-  SynthSequencer.fn.initialize = function (audioContext, exitNode, looper, element) {
+  SynthSequencer.fn.initialize = function () {
     WAB.instruments.Sequencer.fn.initialize.apply(this, arguments);
 
     this.overdrive = new Overdrive(this.audioContext, {

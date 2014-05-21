@@ -21,16 +21,10 @@ Module("WAB.instruments.Drums", function (Drums) {
     "67" : "snare"
   };
 
-  // @audioContext The application's audio context
-  // @node         Audio exit node
-  Drums.fn.initialize = function (audioContext, exitNode, element) {
-    this.plugin(audioContext, exitNode);
+  Drums.fn.initialize = function (args) {
+    this.plugin(args.audioContext, args.exitNode);
 
     this.mapKeysToSounds(Drums.keyMap);
-
-    if (element) {
-      this.mapElementsToSounds(Drums.elementMap);
-    }
   };
 
   Drums.fn.play = function (sound) {

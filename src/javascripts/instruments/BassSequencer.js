@@ -22,11 +22,7 @@ Module("WAB.instruments.BassSequencer", function (BassSequencer) {
       (accidentsMap[notes[i]] ? accidentsMap[notes[i]] : notes[i]) + "2.mp3";
   }
 
-  // @audioContext The application's audio context
-  // @node         Audio exit node
-  // @looper       Application looper that syncs all beats
-  // @element      DOM node with graphical representation of sequencer
-  BassSequencer.fn.initialize = function (audioContext, exitNode, looper, element) {
+  BassSequencer.fn.initialize = function () {
     WAB.instruments.Sequencer.fn.initialize.apply(this, arguments);
 
     this.gainNode.gain.value = 1;

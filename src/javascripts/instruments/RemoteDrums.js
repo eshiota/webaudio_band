@@ -1,9 +1,9 @@
 Module("WAB.instruments.RemoteDrums", function (RemoteDrums) {
 
-  RemoteDrums.fn.initialize = function (audioContext, exitNode, element) {
-    this.element = element;
+  RemoteDrums.fn.initialize = function (args) {
+    this.element = args.element;
     this.id = this.getRandomId();
-    this.drums = Module.run("WAB.instruments.Drums", [audioContext, exitNode]);
+    this.drums = Module.run("WAB.instruments.Drums", [args]);
 
     WAB.socket.emit("new instrument", {
       name : "Drums",

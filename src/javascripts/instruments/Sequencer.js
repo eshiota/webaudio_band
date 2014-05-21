@@ -2,11 +2,11 @@ Module("WAB.instruments.Sequencer", function (Sequencer) {
 
   $.extend(Sequencer.fn, WAB.instruments.Instrument.fn);
 
-  Sequencer.fn.initialize = function (audioContext, exitNode, looper, element) {
-    this.plugin(audioContext, exitNode);
+  Sequencer.fn.initialize = function (args) {
+    this.plugin(args.audioContext, args.exitNode);
 
-    this.looper = looper;
-    this.element = element;
+    this.looper = args.looper;
+    this.element = args.element;
     this.elementHeaders = this.element.find("th");
 
     this.parseSequencer();
