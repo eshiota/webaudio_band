@@ -91,9 +91,12 @@ button {
 
 .track-content {
   @extend %clearfix;
-  width: 1110px;
   margin: 0 auto;
   position: relative;
+
+  .admin & {
+    width: 1110px;
+  }
 }
 
 .track .close {
@@ -164,7 +167,6 @@ button {
 
 .empty-selector {
   white-space: nowrap;
-  width: em(280px);
   height: em(48px);
   line-height: em(48px);
   padding: 0;

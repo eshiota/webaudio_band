@@ -381,9 +381,10 @@ button {
   border-bottom: 3px solid #666; }
 
 .track-content, .host-controls-content, .instrument-selector {
-  width: 1110px;
   margin: 0 auto;
   position: relative; }
+  .admin .track-content, .admin .host-controls-content, .admin .instrument-selector {
+    width: 1110px; }
 
 .track .close, .host-controls .close, .instrument-selector-track .close {
   background: #cccccc;
@@ -444,7 +445,6 @@ button {
 *********************************************************************/
 .empty-selector {
   white-space: nowrap;
-  width: 17.5em;
   height: 3em;
   line-height: 3em;
   padding: 0;
