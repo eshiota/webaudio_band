@@ -4,6 +4,8 @@ Module("WAB.instruments.Drums", function (Drums) {
 
   $.extend(Drums.fn, WAB.instruments.PlayableWithKeys.fn);
 
+  $.extend(Drums.fn, WAB.instruments.Instrument.fn);
+
   Drums.soundsMap = {
     "snare" : "/sounds/drums/snare.wav",
     "kick"  : "/sounds/drums/kick.wav",
@@ -22,12 +24,7 @@ Module("WAB.instruments.Drums", function (Drums) {
   // @audioContext The application's audio context
   // @node         Audio exit node
   Drums.fn.initialize = function (audioContext, exitNode, element) {
-    this.audioContext = audioContext;
-    this.exitNode = exitNode;
-
-    this.gainNode = this.audioContext.createGainNode();
-    this.gainNode.gain.value = 0.5;
-    this.gainNode.connect(this.exitNode);
+    this.plugin(audioContext, exitNode);
 
     this.mapKeysToSounds(Drums.keyMap);
 

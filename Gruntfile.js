@@ -75,6 +75,7 @@ module.exports = function(grunt) {
       "src/javascripts/StageMixer.js",
       "src/javascripts/SoundsMapLoader.js",
       "src/javascripts/Looper.js",
+      "src/javascripts/instruments/Instrument.js",
       "src/javascripts/instruments/PlayableWithKeys.js",
       "src/javascripts/instruments/Sequencer.js",
       "src/javascripts/commands/*.js",

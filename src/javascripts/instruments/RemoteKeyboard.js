@@ -12,6 +12,8 @@ Module("WAB.instruments.RemoteKeyboard", function (RemoteKeyboard) {
 
   $.extend(RemoteKeyboard, WAB.SoundsMapLoader);
 
+  $.extend(RemoteKeyboard.fn, WAB.instruments.Instrument.fn);
+
   RemoteKeyboard.soundsMap = {};
 
   // TODO: not pretty, extract this and BassSequencer behavior to common pattern
@@ -21,14 +23,9 @@ Module("WAB.instruments.RemoteKeyboard", function (RemoteKeyboard) {
   }
 
   RemoteKeyboard.fn.initialize = function (audioContext, exitNode, element) {
-    this.audioContext = audioContext;
-    this.exitNode = exitNode;
+    this.plugin(audioContext, exitNode);
+
     this.element = element;
-
-    this.gainNode = this.audioContext.createGainNode();
-    this.gainNode.gain.value = 0.5;
-    this.gainNode.connect(this.exitNode);
-
 
     this.id = this.getRandomId();
     this.playingSounds = {};

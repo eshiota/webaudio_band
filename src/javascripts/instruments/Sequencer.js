@@ -1,15 +1,13 @@
 Module("WAB.instruments.Sequencer", function (Sequencer) {
 
+  $.extend(Sequencer.fn, WAB.instruments.Instrument.fn);
+
   Sequencer.fn.initialize = function (audioContext, exitNode, looper, element) {
-    this.audioContext = audioContext;
-    this.exitNode = exitNode;
+    this.plugin(audioContext, exitNode);
+
     this.looper = looper;
     this.element = element;
     this.elementHeaders = this.element.find("th");
-
-    this.gainNode = this.audioContext.createGainNode();
-    this.gainNode.gain.value = 1;
-    this.gainNode.connect(this.exitNode);
 
     this.parseSequencer();
 
